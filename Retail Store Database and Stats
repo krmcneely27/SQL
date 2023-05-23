@@ -1,0 +1,26 @@
+--Create a grocery store database
+
+CREATE TABLE my_store (id INTEGER PRIMARY KEY, item TEXT, quantity INTEGER, price INTEGER, aisle INTEGER);
+
+INSERT INTO my_store VALUES (1, "bubbles", 5, 3, 7);
+INSERT INTO my_store VALUES (2, "socks", 10, 2, 4);
+INSERT INTO my_store VALUES (3, "stickers", 4, 2.50, 7);
+INSERT INTO my_store VALUES (4, "candy bar", 15, 1.50, 1);
+INSERT INTO my_store VALUES (5, "shoelaces", 5, 3, 4);
+INSERT INTO my_store VALUES (6, "deodorant", 13, 4.50, 5);
+INSERT INTO my_store VALUES (7, "pens", 20, 1.50, 3);
+INSERT INTO my_store VALUES (8, "erasers", 15, 0.50, 3);
+INSERT INTO my_store VALUES (9, "notebooks", 5, 3.50, 2);
+INSERT INTO my_store VALUES (10, "toothbrush", 10, 2.50, 5);
+INSERT INTO my_store VALUES (11, "dog treats", 4, 6.50, 6);
+INSERT INTO my_store VALUES (12, "cat food", 4, 7, 6);
+INSERT INTO my_store VALUES (13, "planner", 3, 7.50, 2);
+INSERT INTO my_store VALUES (14, "chips", 10, 3.50, 1);
+INSERT INTO my_store VALUES (15, "pencils", 20, 1.50, 3);
+
+--display database ordered by price
+SELECT * FROM my_store;
+SELECT * FROM my_store ORDER BY price;
+
+--what is the sum of all items in the store?
+SELECT SUM(quantity) FROM my_store;
